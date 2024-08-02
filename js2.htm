@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp"/>
+    <button onclick="show()" >Ok </button>
+    <p id="result"></p>
+    <script>
+        const inp = document.getElementById('inp')
+        const result = document.getElementById('result')
+        let arr1 = []
+        let arr2 = []
+        function show(){
+            arr1.push(inp.value)
+            for(let i=0; i< arr1.length; i++){
+                arr2.push(arr1[i].toUpperCase())
+                arr1.shift()
+            }
+            result.innerHTML = arr2
+        }
+    </script>
+</body>
+</html>

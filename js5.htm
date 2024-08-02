@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        const result = document.getElementById('result')
+        const ad = 'vahid '
+        let arr = []
+        function show(){
+            for(let i=0; i< ad.length-1; i++){
+                arr.push(ad.slice(0,i) + ad.toUpperCase()[i] + ad.slice(i+1))
+                result.innerHTML += `<h2>${arr[i]}</h2>`
+                }
+        }
+        show()
+    </script>
+</body>
+</html>

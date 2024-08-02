@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="list1"></h3>
+    <h3> Result: <span id="list2"></span> </h3>
+    <script>
+        const list1 = document.getElementById('list1')
+        const list2 = document.getElementById('list2')
+        const arr =  ['emma', 'liam', 'olivia', 'noah', 'ava', 'william', 'sophia', 'jackson'] 
+        const arr2 = []
+        let up= []
+        for(let i = 0; i<= arr.length; i++){
+            up = arr[i][0].toUpperCase() + arr[i].slice(1)
+            arr2.push(up)
+            list1.innerHTML = arr
+            list2.innerHTML = arr2
+        }
+    </script>
+</body>
+</html>
