@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="min()">remove</button>
+    <input type="text" id="inp" />
+    <button onclick="plus()">add</button>
+    <div id="result"></div>
+    <script>
+        const inp = document.getElementById('inp')
+        const result = document.getElementById('result')
+        let arr1 = []
+        function plus(){
+            let kod = ''
+            arr1.push(inp.value)
+            for(let i = 0; i < arr1.length; i++){
+                kod += arr1[i] + '<br/>'
+            }
+            result.innerHTML = kod
+            inp.value = ''
+        } 
+        function min(){
+            let kod = ''
+            arr1.pop()
+            for(let i = 0; i < arr1.length; i++){
+                kod += arr1[i] + '<br/>'
+            }
+            result.innerHTML = kod
+        }
+    </script>
+</body>
+</html>

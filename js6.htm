@@ -15,17 +15,16 @@
         let arr1 = []
         let reng = []
         function rand(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
+            return Math.floor(Math.random() * (max - min + 1) + min);
         }
-        
-        function show(){
-                arr1.push(inp.value.toUpperCase())
-                reng.push(`${rand(0, 255)},${rand(0, 255)},${rand(0, 255)}`)
-                inp.value = '';
-                for(let i=0; i< arr1.length; i++){ 
-                    result.innerHTML = `<h1>${arr1[i]}</h1>`
-                    result.style.color = `rgb(${reng[i]})`
-                }
+
+        function show() {
+            arr1 = inp.value.toUpperCase().split('');
+            result.innerHTML = '';
+            for (let i = 0; i < arr1.length; i++) {
+            result.innerHTML += `<span style="color: rgb(${rand(0, 255)},${rand(0, 255)},${rand(0, 255)})">${arr1[i]}</span>`;
+        }
+        console.log(arr1);
         }
     </script>
 </body>
